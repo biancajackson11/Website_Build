@@ -5,7 +5,9 @@ This project demonstrates the creation of a simple CI/CD pipeline for a static w
 The website is stored in a repository on GitHub and deployed to a cloud storage bucket (such as Amazon S3). Using GitHub Actions, any changes pushed to the repository are automatically synchronised with the live website.
 
 Purpose
+
 This project is designed to demonstrate practical skills in:
+
 - Cloud infrastructure
 - Continuous Integration / Continuous Deployment (CI/CD)
 - Version control with Git
