@@ -27,4 +27,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: eu-west-2
         run: |
-          aws s3 sync "./HTML website build" s3://my-static-site-11/
+          aws s3 sync "./HTML website build/" s3://my-static-site-11/
