@@ -8,10 +8,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      # Force all JavaScript actions to run on Node.js 24
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3   # updated from v2 → v3
 
       - name: Install AWS CLI
         run: |
@@ -24,4 +27,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: eu-west-2
         run: |
-          aws s3 sync ./HTML\ website\ build s3://my-static-site-11/
+          aws s3 sync "./HTML website build" s3://my-static-site-11/
